@@ -1,0 +1,33 @@
+<div class="modal-dialog" role="document">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title center" id="exampleModalLabel">Upload Photo</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form [formGroup]="postForm" (ngSubmit)="onCloseModal($event)">
+        <div class="form-group d-flex justify-content-center">
+          <!--<label *ngIf="!title!.valid && title!.touched">Required</label>-->
+          <input type="text" class="form-control w-75" placeholder="Title" formControlName="title"
+            [ngClass]="{'input-error': !title!.valid && title!.touched }">
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <!--<label *ngIf="!imgUrl!.valid && imgUrl!.touched">Required</label>-->
+          <input type="text" class="form-control w-75" placeholder="Image URL" formControlName="imgUrl"
+            [ngClass]="{'input-error': !imgUrl!.valid && imgUrl!.touched }">
+        </div>
+        <div class="form-group d-flex justify-content-center">
+          <textarea rows="4" class="form-control w-75" placeholder="Enter a description here..."
+            formControlName="description"></textarea>
+        </div>
+        <div class="row d-flex justify-content-center">
+          <button type="submit" class="btn btn-success" data-dismiss="modal" [disabled]="!postForm.valid"
+            (click)="onCloseModal($event)">Upload</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose()">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<header class="header sticky-top" [ngClass]="open ? 'extend' : ''">
+  <div class="header-menu" (click)="open = !open">
+    <div class="header-menu-icon" [ngClass]="open ? 'open' : ''">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-add-post">
+    <a data-toggle="modal" data-target="#exampleModal" (click)="onShow()">
+      <i class="fas fa-plus"></i>
+    </a>
+  </div>
+  <div class="header-logo">
+    <h1>
+      <a routerLink="/posts">
+        <img src="{{imgPath}}imcagram.png" alt="Imcagram" title="Imcagram">
+      </a>
+    </h1>
+  </div>
+  <div class="header-nav-menu" [ngClass]="open ? '' : 'hide-menu'">
+    <app-nav-menu (status)="toggleOpen($event)"></app-nav-menu>
+  </div>
+</header>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" [hidden]="!showModal">
+  <app-add-form (closeModalEvent)="onClose($event)"></app-add-form>
+</div>

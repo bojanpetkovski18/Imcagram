@@ -1,0 +1,22 @@
+.container {
+  margin-top: 250px;
+  padding-bottom: 50px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.card {
+  padding: 0;
+  margin: 0px 25px 50px 25px;
+  height: 325px;
+}
+
+.spinner {
+  margin-top: 50%;
+}
+
+.spinner,
+mat-spinner {
+  margin-left: auto;
+  margin-right: auto;
+}

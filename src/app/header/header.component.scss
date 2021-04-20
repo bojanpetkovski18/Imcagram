@@ -1,0 +1,204 @@
+.header {
+  height: 200px;
+  background-image: linear-gradient(to left, #384e63, #253340) !important;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 99;
+  background: white;
+
+  .header-menu {
+    transform: scale(0.65);
+    position: fixed;
+  }
+
+  .header-menu-icon {
+    width: 60px;
+    height: 45px;
+    position: fixed;
+    margin: 40px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    span {
+      display: block;
+      position: absolute;
+      height: 9px;
+      width: 50%;
+      background: #eee9e9;
+      border-radius: 9px;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+      -webkit-transition: 0.25s ease-in-out;
+      -moz-transition: 0.25s ease-in-out;
+      -o-transition: 0.25s ease-in-out;
+      transition: 0.25s ease-in-out;
+    }
+  }
+
+  .header-menu-icon span:nth-child(even) {
+    left: 49%;
+    border-radius: 0 9px 9px 0;
+  }
+
+  .header-menu-icon span:nth-child(odd) {
+    left: 0px;
+    border-radius: 9px 0 0 9px;
+  }
+
+  .header-menu-icon span:nth-child(1),
+  .header-menu-icon span:nth-child(2) {
+    top: 0px;
+  }
+
+  .header-menu-icon span:nth-child(3),
+  .header-menu-icon span:nth-child(4) {
+    top: 18px;
+  }
+
+  .header-menu-icon span:nth-child(5),
+  .header-menu-icon span:nth-child(6) {
+    top: 36px;
+  }
+
+  .header-menu-icon.open span:nth-child(1),
+  .header-menu-icon.open span:nth-child(6) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .header-menu-icon.open span:nth-child(2),
+  .header-menu-icon.open span:nth-child(5) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  .header-menu-icon.open span:nth-child(1) {
+    left: 5px;
+    top: 7px;
+  }
+
+  .header-menu-icon.open span:nth-child(2) {
+    left: calc(50% - 5px);
+    top: 7px;
+  }
+
+  .header-menu-icon.open span:nth-child(3) {
+    left: -50%;
+    opacity: 0;
+  }
+
+  .header-menu-icon.open span:nth-child(4) {
+    left: 100%;
+    opacity: 0;
+  }
+
+  .header-menu-icon.open span:nth-child(5) {
+    left: 5px;
+    top: 29px;
+  }
+
+  .header-menu-icon.open span:nth-child(6) {
+    left: calc(50% - 5px);
+    top: 29px;
+  }
+
+  .header-logo {
+    width: 100%;
+    position: fixed;
+    top: 15.5%;
+
+    h1 {
+      text-align: center;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      :hover {
+        cursor: pointer;
+      }
+
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .header-add-post {
+    right: 2%;
+    margin: 22.5px;
+    position: fixed;
+    border: 2px solid white;
+    border-radius: 25%;
+    height: 40px;
+    width: 40px;
+    box-shadow: 2px 2px white;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 36px;
+  }
+
+  .header-add-post:hover {
+    background-color: white;
+    color: #384e63;
+  }
+}
+
+.extend {
+  overflow-y: hidden;
+  height: 415px !important;
+  box-sizing: border-box;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
+}
+
+.header-nav-menu {
+  position: absolute;
+  opacity: 1;
+  width: 100%;
+  max-height: 300px;
+  margin-top: 200px;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  transition-property: all;
+  transition-duration: 0.75s;
+  transition-timing-function: ease;
+}
+
+.hide-menu {
+  max-height: 0px !important;
+  transition-property: all;
+  transition-duration: 0.4s;
+  opacity: 0;
+  transition-timing-function: ease;
+}
+
+.modal {
+  margin-top: 200px;
+}

@@ -1,0 +1,25 @@
+{
+  "Posts": [
+    {
+      "id": 1,
+      "title": "Meowsy",
+      "imgUrl": "https://i1.wp.com/katzenworld.co.uk/wp-content/uploads/2019/06/funny-cat.jpeg?fit=1920%2C1920&ssl=1",
+      "description": "Meow meow meow, again...",
+      "likes": 157
+    },
+    {
+      "title": "Purrito",
+      "imgUrl": "https://i.pinimg.com/736x/25/40/de/2540de1db897bbbc4972d348447f0bb8.jpg",
+      "description": "Purr purr purr...",
+      "likes": 106,
+      "id": 2
+    },
+    {
+      "title": "Whiskers",
+      "imgUrl": "https://d17fnq9dkz9hgj.cloudfront.net/uploads/2012/11/101438745-cat-conjunctivitis-causes.jpg",
+      "description": "Just got my whiskers cut.",
+      "likes": 40,
+      "id": 3
+    }
+  ]
+}

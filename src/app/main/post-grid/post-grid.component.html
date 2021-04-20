@@ -1,0 +1,13 @@
+<div class="post-grid">
+  <div class="card-body">
+    <h5 class="card-title"><b>{{post?.title}}</b>
+      <span (click)="updateLikes(post)">
+        {{post?.likes}} <i class="fas fa-heart"></i>
+      </span>
+    </h5>
+    <hr>
+  </div>
+  <div class="card-img-wrapper">
+    <img class="card-img-bottom" src="{{post?.imgUrl}}" alt="Card image cap" (click)="onDetails(post?.id)">
+  </div>
+</div>

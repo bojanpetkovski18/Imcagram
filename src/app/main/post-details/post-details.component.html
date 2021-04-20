@@ -1,0 +1,41 @@
+<div class="container-fluid" *ngIf="post">
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{{post.imgUrl}}" alt="photo" title="{{post.title}}">
+    </div>
+    <div class="col-md-6">
+      <div class="box">
+        <table class="table table-striped">
+          <tr>
+            <td><span>Title:</span> {{post.title}}</td>
+          </tr>
+          <tr>
+            <td><span>Description:</span> <br>{{post.description}}</td>
+          </tr>
+          <tr>
+            <td><span>Num. Of Likes:</span> {{post.likes}}</td>
+          </tr>
+          <tr>
+            <td>
+              <button class="btn btn-primary" data-toggle="modal" data-target="#editModal"><i
+                  class="fas fa-edit"></i></button>
+              <button class="btn btn-danger" data-toggle="modal" data-target="#deleteModal"><i
+                  class="fas fa-times"></i></button>
+              <button class="btn btn-secondary" (click)="onBack()"><i class="fas fa-chevron-left"></i></button>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" *ngIf="post">
+  <app-delete-form [deletePost]="post"></app-delete-form>
+</div>
+
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true" *ngIf="post">
+  <app-edit-form (status)="reloadPage($event)" [editPost]="post"></app-edit-form>
+</div>

@@ -1,0 +1,32 @@
+.card-img-wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  height: 225px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+}
+
+img {
+  max-width: 90%;
+  height: 225px;
+  padding-bottom: 10px;
+  object-fit: cover;
+}
+
+hr {
+  border-bottom: 1px solid black;
+  margin-bottom: 5px;
+}
+
+span {
+  display: inline;
+  float: right;
+  font-size: 18px;
+  font-weight: 700;
+
+  :hover {
+    color: red;
+  }
+}
